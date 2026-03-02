@@ -16,9 +16,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  */
 class CompanyBusinessUnitDataImportPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\CompanyBusinessUnit\Persistence\SpyCompanyBusinessUnitQuery
-     */
     public function createCompanyBusinessUnitQuery(): SpyCompanyBusinessUnitQuery
     {
         return SpyCompanyBusinessUnitQuery::create();

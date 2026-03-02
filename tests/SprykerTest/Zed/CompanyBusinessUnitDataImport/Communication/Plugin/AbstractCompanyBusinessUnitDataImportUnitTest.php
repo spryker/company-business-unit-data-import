@@ -24,11 +24,6 @@ use Generated\Shared\Transfer\DataImporterReaderConfigurationTransfer;
  */
 abstract class AbstractCompanyBusinessUnitDataImportUnitTest extends Unit
 {
-    /**
-     * @param string $filePath
-     *
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     protected function getDataImportConfigurationTransfer(string $filePath): DataImporterConfigurationTransfer
     {
         $dataImporterReaderConfigurationTransfer = new DataImporterReaderConfigurationTransfer();

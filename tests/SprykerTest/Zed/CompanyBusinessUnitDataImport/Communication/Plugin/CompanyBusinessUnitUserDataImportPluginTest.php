@@ -58,9 +58,6 @@ class CompanyBusinessUnitUserDataImportPluginTest extends AbstractCompanyBusines
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportCompanyBusinessUnitUser(): void
     {
         $customerTransfer = $this->tester->haveCustomer();
@@ -85,9 +82,6 @@ class CompanyBusinessUnitUserDataImportPluginTest extends AbstractCompanyBusines
         $companyBusinessUnitUserDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportCompanyBusinessUnitUserThrowsExceptionWhenCompanyUserKeyNotFound(): void
     {
         $this->expectException(DataImportException::class);
@@ -97,9 +91,6 @@ class CompanyBusinessUnitUserDataImportPluginTest extends AbstractCompanyBusines
         $companyBusinessUnitUserDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         $companyBusinessUnitDataImportPlugin = new CompanyBusinessUnitDataImportPlugin();

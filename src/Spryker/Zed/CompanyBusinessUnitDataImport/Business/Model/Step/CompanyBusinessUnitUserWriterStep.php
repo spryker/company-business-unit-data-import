@@ -21,9 +21,6 @@ class CompanyBusinessUnitUserWriterStep implements DataImportStepInterface
      */
     protected $businessUnitDataImportRepository;
 
-    /**
-     * @param \Spryker\Zed\CompanyBusinessUnitDataImport\Persistence\CompanyBusinessUnitDataImportRepositoryInterface $businessUnitDataImportRepository
-     */
     public function __construct(CompanyBusinessUnitDataImportRepositoryInterface $businessUnitDataImportRepository)
     {
         $this->businessUnitDataImportRepository = $businessUnitDataImportRepository;
@@ -52,9 +49,6 @@ class CompanyBusinessUnitUserWriterStep implements DataImportStepInterface
             ->save();
     }
 
-    /**
-     * @return \Orm\Zed\CompanyUser\Persistence\SpyCompanyUserQuery
-     */
     protected function createCompanyUserQuery(): SpyCompanyUserQuery
     {
         return SpyCompanyUserQuery::create();

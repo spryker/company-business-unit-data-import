@@ -57,9 +57,6 @@ class CompanyBusinessUnitDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration(implode(DIRECTORY_SEPARATOR, [$this->getModuleDataImportDirectory(), 'company_business_unit_address.csv']), static::IMPORT_TYPE_COMPANY_BUSINESS_UNIT_ADDRESS);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleDataImportDirectory(): string
     {
         return implode(DIRECTORY_SEPARATOR, [
@@ -69,9 +66,6 @@ class CompanyBusinessUnitDataImportConfig extends DataImportConfig
         ]) . DIRECTORY_SEPARATOR;
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

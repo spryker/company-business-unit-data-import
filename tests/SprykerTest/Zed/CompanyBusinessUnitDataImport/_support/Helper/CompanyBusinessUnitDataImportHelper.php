@@ -12,9 +12,6 @@ use Orm\Zed\CompanyBusinessUnit\Persistence\SpyCompanyBusinessUnitQuery;
 
 class CompanyBusinessUnitDataImportHelper extends Module
 {
-    /**
-     * @return void
-     */
     public function assertDatabaseTableIsEmpty(): void
     {
         $companyQuery = $this->getCompanyBusinessUnitQuery();
@@ -25,9 +22,6 @@ class CompanyBusinessUnitDataImportHelper extends Module
         );
     }
 
-    /**
-     * @return void
-     */
     public function assertDatabaseTableContainsData(): void
     {
         $companyQuery = $this->getCompanyBusinessUnitQuery();
@@ -38,9 +32,6 @@ class CompanyBusinessUnitDataImportHelper extends Module
         );
     }
 
-    /**
-     * @return \Orm\Zed\CompanyBusinessUnit\Persistence\SpyCompanyBusinessUnitQuery
-     */
     protected function getCompanyBusinessUnitQuery(): SpyCompanyBusinessUnitQuery
     {
         return SpyCompanyBusinessUnitQuery::create();

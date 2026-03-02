@@ -21,11 +21,6 @@ class CompanyKeyToIdCompanyStep implements DataImportStepInterface
      */
     protected $idCompanyListCache = [];
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $dataSet[CompanyBusinessUnitDataSet::ID_COMPANY] = $this->getIdCompanyByKey($dataSet[CompanyBusinessUnitDataSet::COMPANY_KEY]);
@@ -59,9 +54,6 @@ class CompanyKeyToIdCompanyStep implements DataImportStepInterface
         return $this->idCompanyListCache[$companyKey];
     }
 
-    /**
-     * @return \Orm\Zed\Company\Persistence\SpyCompanyQuery
-     */
     protected function createCompanyQuery(): SpyCompanyQuery
     {
         return SpyCompanyQuery::create();

@@ -23,9 +23,6 @@ use Spryker\Zed\DataImport\Business\Model\DataImporterInterface;
  */
 class CompanyBusinessUnitDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCompanyBusinessUnitDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getCompanyBusinessUnitDataImporterConfiguration());
@@ -41,9 +38,6 @@ class CompanyBusinessUnitDataImportBusinessFactory extends DataImportBusinessFac
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCompanyBusinessUnitUserDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getCompanyBusinessUnitUserDataImporterConfiguration());
@@ -56,9 +50,6 @@ class CompanyBusinessUnitDataImportBusinessFactory extends DataImportBusinessFac
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCompanyBusinessUnitAddressDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getCompanyBusinessUnitAddressDataImporterConfiguration());
@@ -71,9 +62,6 @@ class CompanyBusinessUnitDataImportBusinessFactory extends DataImportBusinessFac
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\CompanyBusinessUnitDataImport\Business\Model\CompanyBusinessUnitWriterStep
-     */
     public function createCompanyBusinessUnitWriterStep(): CompanyBusinessUnitWriterStep
     {
         return new CompanyBusinessUnitWriterStep();
@@ -97,9 +85,6 @@ class CompanyBusinessUnitDataImportBusinessFactory extends DataImportBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CompanyBusinessUnitDataImport\Business\Model\Step\CompanyBusinessUnitUserWriterStep
-     */
     public function createCompanyBusinessUnitUserWriterStep(): CompanyBusinessUnitUserWriterStep
     {
         return new CompanyBusinessUnitUserWriterStep(
@@ -107,9 +92,6 @@ class CompanyBusinessUnitDataImportBusinessFactory extends DataImportBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CompanyBusinessUnitDataImport\Business\Model\Step\BusinessUnitKeyToAddressKeyStep
-     */
     public function createBusinessUnitKeyToAddressKeyStep(): BusinessUnitKeyToAddressKeyStep
     {
         return new BusinessUnitKeyToAddressKeyStep(

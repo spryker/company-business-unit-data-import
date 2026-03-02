@@ -61,9 +61,6 @@ class CompanyBusinessUnitDataImportPluginTest extends AbstractCompanyBusinessUni
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsCompanyBusinessUnit(): void
     {
         $this->tester->truncateCompanyBusinessUnitRelations();
@@ -82,9 +79,6 @@ class CompanyBusinessUnitDataImportPluginTest extends AbstractCompanyBusinessUni
         $this->tester->assertDatabaseTableContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsExceptionWhenCompanyNotFound(): void
     {
         $this->expectException(DataImportException::class);
@@ -100,9 +94,6 @@ class CompanyBusinessUnitDataImportPluginTest extends AbstractCompanyBusinessUni
         $companyBusinessUnitDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsExceptionWhenParentBusinessUnitNotFound(): void
     {
         $this->expectException(DataImportException::class);

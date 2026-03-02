@@ -19,19 +19,11 @@ class ParentBusinessUnitKeyToIdCompanyBusinessUnitStep implements DataImportStep
      */
     protected $businessUnitDataImportRepository;
 
-    /**
-     * @param \Spryker\Zed\CompanyBusinessUnitDataImport\Persistence\CompanyBusinessUnitDataImportRepositoryInterface $businessUnitDataImportRepository
-     */
     public function __construct(CompanyBusinessUnitDataImportRepositoryInterface $businessUnitDataImportRepository)
     {
         $this->businessUnitDataImportRepository = $businessUnitDataImportRepository;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $companyBusinessUnitKey = $dataSet[CompanyBusinessUnitDataSet::PARENT_BUSINESS_UNIT_KEY];

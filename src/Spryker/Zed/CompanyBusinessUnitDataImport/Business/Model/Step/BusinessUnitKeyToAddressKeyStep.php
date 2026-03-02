@@ -28,19 +28,11 @@ class BusinessUnitKeyToAddressKeyStep implements DataImportStepInterface
      */
     protected $businessUnitDataImportRepository;
 
-    /**
-     * @param \Spryker\Zed\CompanyBusinessUnitDataImport\Persistence\CompanyBusinessUnitDataImportRepositoryInterface $businessUnitDataImportRepository
-     */
     public function __construct(CompanyBusinessUnitDataImportRepositoryInterface $businessUnitDataImportRepository)
     {
         $this->businessUnitDataImportRepository = $businessUnitDataImportRepository;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $idCompanyBusinessUnit = $this->businessUnitDataImportRepository
@@ -82,17 +74,11 @@ class BusinessUnitKeyToAddressKeyStep implements DataImportStepInterface
         return $this->idCompanyUnitAddressListCache[$companyAddressKey];
     }
 
-    /**
-     * @return \Orm\Zed\CompanyUnitAddress\Persistence\SpyCompanyUnitAddressQuery
-     */
     protected function createCompanyUnitAddressQuery(): SpyCompanyUnitAddressQuery
     {
         return SpyCompanyUnitAddressQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\CompanyUnitAddress\Persistence\SpyCompanyUnitAddressToCompanyBusinessUnitQuery
-     */
     protected function createCompanyUnitAddressToCompanyBusinessUnitQuery(): SpyCompanyUnitAddressToCompanyBusinessUnitQuery
     {
         return SpyCompanyUnitAddressToCompanyBusinessUnitQuery::create();

@@ -52,9 +52,6 @@ class CompanyBusinessUnitAddressDataImportPluginTest extends AbstractCompanyBusi
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportCompanyBusinessUnitAddress(): void
     {
         $this->tester->haveCompanyUnitAddress([
@@ -72,9 +69,6 @@ class CompanyBusinessUnitAddressDataImportPluginTest extends AbstractCompanyBusi
         $companyBusinessUnitAddressDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportCompanyBusinessUnitAddressThrowsExceptionWhenCompanyAddressKeyNotFound(): void
     {
         $this->expectException(DataImportException::class);
@@ -84,9 +78,6 @@ class CompanyBusinessUnitAddressDataImportPluginTest extends AbstractCompanyBusi
         $companyBusinessUnitAddressDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         $companyBusinessUnitDataImportPlugin = new CompanyBusinessUnitDataImportPlugin();

@@ -28,17 +28,11 @@ class CompanyBusinessUnitDataImportCommunicationTester extends Actor
 {
     use _generated\CompanyBusinessUnitDataImportCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function truncateCompanyBusinessUnitRelations(): void
     {
         $this->truncateTableRelations($this->getCompanyBusinessUnitQuery());
     }
 
-    /**
-     * @return \Orm\Zed\CompanyBusinessUnit\Persistence\SpyCompanyBusinessUnitQuery
-     */
     protected function getCompanyBusinessUnitQuery(): SpyCompanyBusinessUnitQuery
     {
         return SpyCompanyBusinessUnitQuery::create();
