@@ -13,16 +13,22 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class CompanyBusinessUnitDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_COMPANY_BUSINESS_UNIT = 'company-business-unit';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_COMPANY_BUSINESS_UNIT_USER = 'company-business-unit-user';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_COMPANY_BUSINESS_UNIT_ADDRESS = 'company-business-unit-address';
